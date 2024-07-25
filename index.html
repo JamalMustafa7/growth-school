@@ -3,8 +3,282 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Growth School</title>
+    <title>Learning Marketing with Our Company</title>
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/937da32a17.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    :root {
+      --primary: #030a21;
+    }
+    body {
+      background-color: black;
+    }
+
+    .navbar {
+      min-height: 75px;
+      background-color: var(--primary);
+      display: flex;
+      align-items: center;
+      padding: 0 40px;
+    }
+    .logo img {
+      width: 115px;
+    }
+    .nav-button {
+      padding: 14px 20px;
+      background-color: inherit;
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+    }
+
+    .dropdown-button:hover button {
+      color: var(--primary);
+      background-color: white;
+    }
+    .dropdown-button:hover .down-arrow {
+      color: var(--primary);
+    }
+    .dropdown-button .down-arrow {
+      display: inline-block;
+      margin-left: 8px;
+    }
+    .dropdown {
+      background-color: white;
+      color: var(--primary);
+
+      padding: 20px 35px;
+      min-width: 300px;
+      border-radius: 10px;
+      text-align: left;
+      position: absolute;
+      top: 120%;
+    }
+    ul {
+      list-style: none;
+    }
+    .dropdown li {
+      padding: 4px 0;
+      width: max-content;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .dropdown li:hover {
+      transform: skew(-10deg);
+      background-color: #37ed81;
+    }
+    .dropdown-button {
+      position: relative;
+    }
+    .forward-arrow {
+      margin-left: 4px;
+      display: inline-block;
+      transform: translateY(3px);
+    }
+    .nav-links {
+      margin-left: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-link a {
+      color: white;
+      text-decoration: none;
+    }
+    .nav-btns {
+      margin-left: auto;
+    }
+    .hamburger span {
+      height: 2px;
+      background-color: white;
+      width: 20px;
+      display: inline-block;
+    }
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      margin-left: 1rem;
+      padding: 12px;
+      background-color: inherit;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./resources/logo.svg" alt="logo" />
+      </div>
+      <div class="nav-links">
+        <div class="dropdown-button">
+          <button class="nav-button">
+            Learn
+            <div class="down-arrow">
+              <svg
+                width="9"
+                height="10"
+                viewBox="0 0 9 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.3611 4.86133L4.16666 8.05577L0.972221 4.86133L0 5.83355L4.16666 10.0002L8.33332 5.83355L7.3611 4.86133Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  opacity="0.5"
+                  d="M7.3611 0L4.16666 3.19444L0.972221 0L0 0.97222L4.16666 5.13888L8.33332 0.97222L7.3611 0Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+          </button>
+          <div class="dropdown">
+            <ul>
+              <li>
+                Marketing
+                <span class="forward-arrow"
+                  ><svg
+                    width="15"
+                    height="17"
+                    viewBox="0 0 15 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9915 8.49928L7.36188 16.1289L5.32654 14.0935L8.90059 10.5195L0.886943 10.6306L0.730906 6.99566L9.18105 6.87403L5.20781 2.90078L7.30039 0.808204L14.9915 8.49928Z"
+                      fill="currentColor"
+                    ></path></svg
+                ></span>
+              </li>
+              <li>
+                Generative AI
+                <span class="forward-arrow"
+                  ><svg
+                    width="15"
+                    height="17"
+                    viewBox="0 0 15 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9915 8.49928L7.36188 16.1289L5.32654 14.0935L8.90059 10.5195L0.886943 10.6306L0.730906 6.99566L9.18105 6.87403L5.20781 2.90078L7.30039 0.808204L14.9915 8.49928Z"
+                      fill="currentColor"
+                    ></path></svg
+                ></span>
+              </li>
+              <li>
+                Product
+                <span class="forward-arrow"
+                  ><svg
+                    width="15"
+                    height="17"
+                    viewBox="0 0 15 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9915 8.49928L7.36188 16.1289L5.32654 14.0935L8.90059 10.5195L0.886943 10.6306L0.730906 6.99566L9.18105 6.87403L5.20781 2.90078L7.30039 0.808204L14.9915 8.49928Z"
+                      fill="currentColor"
+                    ></path></svg
+                ></span>
+              </li>
+              <li>
+                Design
+                <span class="forward-arrow"
+                  ><svg
+                    width="15"
+                    height="17"
+                    viewBox="0 0 15 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9915 8.49928L7.36188 16.1289L5.32654 14.0935L8.90059 10.5195L0.886943 10.6306L0.730906 6.99566L9.18105 6.87403L5.20781 2.90078L7.30039 0.808204L14.9915 8.49928Z"
+                      fill="currentColor"
+                    ></path></svg
+                ></span>
+              </li>
+              <li>
+                Bussiness
+                <span class="forward-arrow"
+                  ><svg
+                    width="15"
+                    height="17"
+                    viewBox="0 0 15 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9915 8.49928L7.36188 16.1289L5.32654 14.0935L8.90059 10.5195L0.886943 10.6306L0.730906 6.99566L9.18105 6.87403L5.20781 2.90078L7.30039 0.808204L14.9915 8.49928Z"
+                      fill="currentColor"
+                    ></path></svg
+                ></span>
+              </li>
+              <li>
+                Tech & Data
+                <span class="forward-arrow"
+                  ><svg
+                    width="15"
+                    height="17"
+                    viewBox="0 0 15 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.9915 8.49928L7.36188 16.1289L5.32654 14.0935L8.90059 10.5195L0.886943 10.6306L0.730906 6.99566L9.18105 6.87403L5.20781 2.90078L7.30039 0.808204L14.9915 8.49928Z"
+                      fill="currentColor"
+                    ></path></svg
+                ></span>
+              </li>
+            </ul>
+            <ul
+              style="
+                margin-top: 15px;
+                border-top: 1px solid rgba(50, 50, 50, 0.2);
+                padding-top: 15px;
+              "
+            >
+              <li>Personal Growth</li>
+              <li>Founders</li>
+            </ul>
+          </div>
+        </div>
+        <div class="nav-link">
+          <a href="#">Upskill your Team</a>
+        </div>
+        <div class="nav-link">
+          <a href="#">About</a>
+        </div>
+      </div>
+      <div class="nav-btns">
+        <button class="nav-button">Login</button>
+        <button class="nav-button">Apply as Mentor</button>
+      </div>
+      <div>
+        <button class="hamburger hide">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
