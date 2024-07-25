@@ -19,6 +19,7 @@
     }
     :root {
       --primary: #030a21;
+      --green: #37ed81;
     }
     body {
       background-color: black;
@@ -42,11 +43,11 @@
       border-radius: 8px;
     }
 
-    .dropdown-button:hover button {
+    .dropdown-button button:hover {
       color: var(--primary);
       background-color: white;
     }
-    .dropdown-button:hover .down-arrow {
+    .dropdown-button button:hover .down-arrow {
       color: var(--primary);
     }
     .dropdown-button .down-arrow {
@@ -77,6 +78,11 @@
       transform: skew(-10deg);
       background-color: #37ed81;
     }
+    .dropdown-button .nav-button {
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      /* border: 2px solid rgb(0, 0, 0, 0.2); */
+    }
     .dropdown-button {
       position: relative;
     }
@@ -90,6 +96,8 @@
       display: flex;
       align-items: center;
       gap: 2rem;
+      flex-grow: 1;
+      flex-shrink: 3;
     }
 
     .nav-link a {
@@ -106,6 +114,7 @@
       display: inline-block;
     }
     .hamburger {
+      flex-shrink: 0;
       display: flex;
       flex-direction: column;
       gap: 6px;
@@ -114,9 +123,81 @@
       margin-left: 1rem;
       padding: 12px;
       background-color: inherit;
+      cursor: pointer;
+    }
+
+    .nav-inner-links {
+      display: flex;
+      gap: 2rem;
+      flex-grow: 1;
+      align-items: center;
     }
     .hide {
       display: none;
+    }
+    @media screen and (max-width: 850px) and (min-width: 500px) {
+      .dropdown {
+        right: 0;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .nav-links {
+        justify-content: flex-end;
+      }
+      .nav-inner-links {
+        position: absolute;
+        flex-direction: column;
+        top: 90px;
+        right: 30px;
+        background-color: white;
+        width: 320px;
+        border-radius: 15px;
+        align-items: flex-start;
+        padding: 30px;
+      }
+      .nav-button {
+        color: var(--primary);
+        border: 2px solid rgb(0, 0, 0, 0.2);
+      }
+      .nav-button:hover {
+        --green: #37ed81;
+        background-color: var(--green);
+      }
+      .nav-btns {
+        color: var(--primary);
+        display: flex;
+        width: 100%;
+        justify-content: stretch;
+        flex-direction: column;
+        margin-left: 0;
+        gap: 1rem;
+        padding-top: 20px;
+        border-top: 1px solid rgb(0, 0, 0, 0.1);
+      }
+      .nav-link a {
+        text-align: left;
+        color: var(--primary);
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .dropdown {
+        right: 0;
+        min-width: 100px;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .nav-inner-links {
+        width: 250px;
+      }
+      .nav-links {
+        margin-left: 0;
+        justify-content: center;
+      }
+      .navbar {
+        padding: 0 10px;
+      }
     }
   </style>
   <body>
@@ -148,7 +229,7 @@
               </svg>
             </div>
           </button>
-          <div class="dropdown">
+          <div class="dropdown hide">
             <ul>
               <li>
                 Marketing
@@ -259,17 +340,20 @@
             </ul>
           </div>
         </div>
-        <div class="nav-link">
-          <a href="#">Upskill your Team</a>
-        </div>
-        <div class="nav-link">
-          <a href="#">About</a>
+        <div class="nav-inner-links">
+          <div class="nav-link">
+            <a href="#">Upskill your Team</a>
+          </div>
+          <div class="nav-link">
+            <a href="#">About</a>
+          </div>
+          <div class="nav-btns">
+            <button class="nav-button">Login</button>
+            <button class="nav-button">Apply as Mentor</button>
+          </div>
         </div>
       </div>
-      <div class="nav-btns">
-        <button class="nav-button">Login</button>
-        <button class="nav-button">Apply as Mentor</button>
-      </div>
+
       <div>
         <button class="hamburger hide">
           <span></span>
