@@ -3,11 +3,14 @@ const dropdown=document.querySelector(".dropdown");
 const hamburger=document.querySelector(".hamburger");
 const innerLink=document.querySelector(".nav-inner-links");
 
+let dropdown_open=false;
+let hamburger_open=false;
 document.addEventListener('DOMContentLoaded',function()
 {
     if(window.innerWidth<=850)
     {
         innerLink.classList.add("hide");
+        hamburger_open=false;
     }
 })
 window.addEventListener('resize', function() {
@@ -15,12 +18,19 @@ window.addEventListener('resize', function() {
         {
             innerLink.classList.add("hide");
         }
+   
     else
         innerLink.classList.remove("hide");
 });
 dropdownButton.addEventListener("click",function(event)
 {
-    innerLink.classList.add("hide");
+    dropdown_open=!dropdown_open;
+    console.log(dropdown_open)
+    if(hamburger_open)
+    {
+        innerLink.classList.add("hide");
+        hamburger_open=false;
+    }
 
     dropdown.classList.toggle("hide");
     event.stopPropagation();
@@ -28,13 +38,27 @@ dropdownButton.addEventListener("click",function(event)
 
 document.addEventListener("click",function(event)
 {
-    dropdown.classList.add("hide")
-    innerLink.classList.add("hide");
+    if(hamburger_open)
+        {
+            innerLink.classList.add("hide");
+            hamburger_open=false;
+        }
+        if(dropdown_open)
+            {
+                dropdown.classList.add("hide")
+                dropdown_open=false;
+            }
+    
 })
 
 hamburger.addEventListener("click",function(event)
 {
-    dropdown.classList.add("hide")
+    hamburger_open=!hamburger_open;
+    if(dropdown_open)
+    {
+        dropdown.classList.add("hide")
+        dropdown_open=false
+    }
     innerLink.classList.toggle("hide")
     event.stopPropagation();
 })
