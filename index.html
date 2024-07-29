@@ -36,6 +36,75 @@
         font-weight: 500;
         text-shadow: 1px 1px 1px rgb(143, 142, 142);
       }
+
+
+      /* Crash Courses */
+      .crash-courses{
+        margin-top:5rem;
+      }
+      .cards{
+        margin-top: 4rem;
+        padding: 0 30px;
+        display: grid;
+        grid-template-columns:repeat(auto-fill,minmax(350px,1fr));
+        max-width: calc(3 * 350 + 60 + 8 * 16px);
+        gap:1.5rem;
+    }
+    .card{
+        border: 2px solid black;
+        min-height: 120px;
+        border-radius: 12px;
+        box-shadow: 4px 4px rgba(128, 128, 128, 0.409);
+        padding: 2rem;
+        background: linear-gradient(to right,white,rgb(224, 224, 146));
+        color: rgb(53, 59, 77);
+        display: flex;
+        flex-direction: column;
+        gap:1rem;
+
+      }
+      .card a svg{
+        width:24px;
+      }
+      a{
+        text-decoration: none;
+      }
+      .preview-yellow{
+        color: hsla(47.86516853932585, 100.00%, 65.10%, 1.00);
+      }
+      .preview-red{
+        color:#cc5831;
+      }
+      .preview-green{
+        color:#2baa38;
+      }
+      .preview-dark-yellow{
+        color:#957c17;
+      }
+      .card h3{
+        font-size: 2rem;
+        font-weight: 600;
+      }
+       .card .tag{
+        background-color:rgb(216,234,213);
+        border:1px solid rgba(51, 116, 49, .3);
+        padding: 8px 12px;
+        border-radius: 4px;
+      }
+       .card .special-tag{
+        background-color:rgb(219,212,229);
+        border:1px solid rgba(150, 98, 255, .3);
+      }
+      .card-svgs{
+        display: flex;
+        gap:10px;
+        font-weight: 600;
+    }
+    .svg-container{
+        display: flex;
+        align-items: center;
+        gap:5px;
+      }
     </style>
   </head>
 
@@ -346,8 +415,198 @@
       </div>
       <div class="cards">
         <div class="card">
-
+            <div>
+                <button class="tag">
+                    New
+                </button>
+            </div>
+            <h3>Amazon Ads</h3>
+            <div class="card-svgs">
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 2.5H4.5C3.39543 2.5 2.5 3.39543 2.5 4.5V15.5C2.5 16.6046 3.39543 17.5 4.5 17.5H15.5C16.6046 17.5 17.5 16.6046 17.5 15.5V4.5C17.5 3.39543 16.6046 2.5 15.5 2.5Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M7.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                        <path d="M12.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                    </svg>
+                    <div>1 Day</div>
+                </div>
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.13446 12.5C5.1126 12.9526 4.45862 13.4842 4.23673 14.1164C4.16666 14.2888 4.16666 14.3822 4.16666 14.5618V17.1839C4.16666 17.8161 4.58708 18.3333 5.10092 18.3333H14.9107H14.8991C15.4129 18.3333 15.8333 17.8161 15.8333 17.1839V14.5618C15.8333 14.3894 15.8333 14.2026 15.7633 14.1164C15.5472 13.4914 14.8874 12.9454 13.8655 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M17.1667 1.66675H2.83334C1.72877 1.66675 0.833344 2.56218 0.833344 3.66675V16.3334C0.833344 17.438 1.72877 18.3334 2.83334 18.3334H17.1667C18.2712 18.3334 19.1667 17.438 19.1667 16.3334V3.66675C19.1667 2.56218 18.2712 1.66675 17.1667 1.66675Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M9.99999 11.6667C8.16666 11.6667 6.66666 10.1994 6.66666 8.40588V7.42762C6.66666 5.63414 8.16666 4.16675 9.99999 4.16675C11.8333 4.16675 13.3333 5.63414 13.3333 7.42762V8.40588C13.3333 10.1994 11.8333 11.6667 9.99999 11.6667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <div>Live Included</div>
+                </div>
+            </div>
+            <h3 class="price">₹ 499</h3>
+            <a href="#" class="preview preview-yellow">Preview 
+                <svg width="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform:translateY(3px);">
+                    <path d="M17 3V16.1578H13.3849V9.99409L6.36671 17L3 14.0002L10.3965 6.60882H3.33928V3L17 3Z" fill="currentColor"></path>
+                </svg>
+            </a>
         </div>
+        <div class="card">
+            <div>
+                <button class="tag">
+                    New
+                </button>
+            </div>
+            <h3>Digital Marketing</h3>
+            <div class="card-svgs">
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 2.5H4.5C3.39543 2.5 2.5 3.39543 2.5 4.5V15.5C2.5 16.6046 3.39543 17.5 4.5 17.5H15.5C16.6046 17.5 17.5 16.6046 17.5 15.5V4.5C17.5 3.39543 16.6046 2.5 15.5 2.5Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M7.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                        <path d="M12.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                    </svg>
+                    <div>4 Hours</div>
+                </div>
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.13446 12.5C5.1126 12.9526 4.45862 13.4842 4.23673 14.1164C4.16666 14.2888 4.16666 14.3822 4.16666 14.5618V17.1839C4.16666 17.8161 4.58708 18.3333 5.10092 18.3333H14.9107H14.8991C15.4129 18.3333 15.8333 17.8161 15.8333 17.1839V14.5618C15.8333 14.3894 15.8333 14.2026 15.7633 14.1164C15.5472 13.4914 14.8874 12.9454 13.8655 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M17.1667 1.66675H2.83334C1.72877 1.66675 0.833344 2.56218 0.833344 3.66675V16.3334C0.833344 17.438 1.72877 18.3334 2.83334 18.3334H17.1667C18.2712 18.3334 19.1667 17.438 19.1667 16.3334V3.66675C19.1667 2.56218 18.2712 1.66675 17.1667 1.66675Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M9.99999 11.6667C8.16666 11.6667 6.66666 10.1994 6.66666 8.40588V7.42762C6.66666 5.63414 8.16666 4.16675 9.99999 4.16675C11.8333 4.16675 13.3333 5.63414 13.3333 7.42762V8.40588C13.3333 10.1994 11.8333 11.6667 9.99999 11.6667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <div>Live Included</div>
+                </div>
+            </div>
+            <h3 class="price">₹ 499</h3>
+            <a href="#" class="preview preview-red">Preview 
+                <svg width="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform:translateY(3px);">
+                    <path d="M17 3V16.1578H13.3849V9.99409L6.36671 17L3 14.0002L10.3965 6.60882H3.33928V3L17 3Z" fill="currentColor"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="card">
+            <div>
+                <button class="tag special-tag">
+                    Limited seats
+                </button>
+            </div>
+            <h3>SEO</h3>
+            <div class="card-svgs">
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 2.5H4.5C3.39543 2.5 2.5 3.39543 2.5 4.5V15.5C2.5 16.6046 3.39543 17.5 4.5 17.5H15.5C16.6046 17.5 17.5 16.6046 17.5 15.5V4.5C17.5 3.39543 16.6046 2.5 15.5 2.5Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M7.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                        <path d="M12.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                    </svg>
+                    <div>2 Day</div>
+                </div>
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.13446 12.5C5.1126 12.9526 4.45862 13.4842 4.23673 14.1164C4.16666 14.2888 4.16666 14.3822 4.16666 14.5618V17.1839C4.16666 17.8161 4.58708 18.3333 5.10092 18.3333H14.9107H14.8991C15.4129 18.3333 15.8333 17.8161 15.8333 17.1839V14.5618C15.8333 14.3894 15.8333 14.2026 15.7633 14.1164C15.5472 13.4914 14.8874 12.9454 13.8655 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M17.1667 1.66675H2.83334C1.72877 1.66675 0.833344 2.56218 0.833344 3.66675V16.3334C0.833344 17.438 1.72877 18.3334 2.83334 18.3334H17.1667C18.2712 18.3334 19.1667 17.438 19.1667 16.3334V3.66675C19.1667 2.56218 18.2712 1.66675 17.1667 1.66675Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M9.99999 11.6667C8.16666 11.6667 6.66666 10.1994 6.66666 8.40588V7.42762C6.66666 5.63414 8.16666 4.16675 9.99999 4.16675C11.8333 4.16675 13.3333 5.63414 13.3333 7.42762V8.40588C13.3333 10.1994 11.8333 11.6667 9.99999 11.6667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <div>Live Included</div>
+                </div>
+            </div>
+            <h3 class="price">₹ 299</h3>
+            <a href="#" class="preview-dark-yellow">Preview 
+                <svg width="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform:translateY(3px);">
+                    <path d="M17 3V16.1578H13.3849V9.99409L6.36671 17L3 14.0002L10.3965 6.60882H3.33928V3L17 3Z" fill="currentColor"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="card">
+            <div>
+                <button class="tag">
+                    Limited seats
+                </button>
+            </div>
+            <h3>SEO</h3>
+            <div class="card-svgs">
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 2.5H4.5C3.39543 2.5 2.5 3.39543 2.5 4.5V15.5C2.5 16.6046 3.39543 17.5 4.5 17.5H15.5C16.6046 17.5 17.5 16.6046 17.5 15.5V4.5C17.5 3.39543 16.6046 2.5 15.5 2.5Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M7.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                        <path d="M12.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                    </svg>
+                    <div>2 Day</div>
+                </div>
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.13446 12.5C5.1126 12.9526 4.45862 13.4842 4.23673 14.1164C4.16666 14.2888 4.16666 14.3822 4.16666 14.5618V17.1839C4.16666 17.8161 4.58708 18.3333 5.10092 18.3333H14.9107H14.8991C15.4129 18.3333 15.8333 17.8161 15.8333 17.1839V14.5618C15.8333 14.3894 15.8333 14.2026 15.7633 14.1164C15.5472 13.4914 14.8874 12.9454 13.8655 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M17.1667 1.66675H2.83334C1.72877 1.66675 0.833344 2.56218 0.833344 3.66675V16.3334C0.833344 17.438 1.72877 18.3334 2.83334 18.3334H17.1667C18.2712 18.3334 19.1667 17.438 19.1667 16.3334V3.66675C19.1667 2.56218 18.2712 1.66675 17.1667 1.66675Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M9.99999 11.6667C8.16666 11.6667 6.66666 10.1994 6.66666 8.40588V7.42762C6.66666 5.63414 8.16666 4.16675 9.99999 4.16675C11.8333 4.16675 13.3333 5.63414 13.3333 7.42762V8.40588C13.3333 10.1994 11.8333 11.6667 9.99999 11.6667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <div>Live Included</div>
+                </div>
+            </div>
+            <h3 class="price">₹ 299</h3>
+            <a href="#" class="preview-dark-yellow">Preview 
+                <svg width="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform:translateY(3px);">
+                    <path d="M17 3V16.1578H13.3849V9.99409L6.36671 17L3 14.0002L10.3965 6.60882H3.33928V3L17 3Z" fill="currentColor"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="card">
+            <div>
+                <button class="tag">
+                    Limited seats
+                </button>
+            </div>
+            <h3>SEO</h3>
+            <div class="card-svgs">
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 2.5H4.5C3.39543 2.5 2.5 3.39543 2.5 4.5V15.5C2.5 16.6046 3.39543 17.5 4.5 17.5H15.5C16.6046 17.5 17.5 16.6046 17.5 15.5V4.5C17.5 3.39543 16.6046 2.5 15.5 2.5Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M7.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                        <path d="M12.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                    </svg>
+                    <div>2 Day</div>
+                </div>
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.13446 12.5C5.1126 12.9526 4.45862 13.4842 4.23673 14.1164C4.16666 14.2888 4.16666 14.3822 4.16666 14.5618V17.1839C4.16666 17.8161 4.58708 18.3333 5.10092 18.3333H14.9107H14.8991C15.4129 18.3333 15.8333 17.8161 15.8333 17.1839V14.5618C15.8333 14.3894 15.8333 14.2026 15.7633 14.1164C15.5472 13.4914 14.8874 12.9454 13.8655 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M17.1667 1.66675H2.83334C1.72877 1.66675 0.833344 2.56218 0.833344 3.66675V16.3334C0.833344 17.438 1.72877 18.3334 2.83334 18.3334H17.1667C18.2712 18.3334 19.1667 17.438 19.1667 16.3334V3.66675C19.1667 2.56218 18.2712 1.66675 17.1667 1.66675Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M9.99999 11.6667C8.16666 11.6667 6.66666 10.1994 6.66666 8.40588V7.42762C6.66666 5.63414 8.16666 4.16675 9.99999 4.16675C11.8333 4.16675 13.3333 5.63414 13.3333 7.42762V8.40588C13.3333 10.1994 11.8333 11.6667 9.99999 11.6667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <div>Live Included</div>
+                </div>
+            </div>
+            <h3 class="price">₹ 299</h3>
+            <a href="#" class="preview-dark-yellow">Preview 
+                <svg width="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform:translateY(3px);">
+                    <path d="M17 3V16.1578H13.3849V9.99409L6.36671 17L3 14.0002L10.3965 6.60882H3.33928V3L17 3Z" fill="currentColor"></path>
+                </svg>
+            </a>
+        </div>
+        <div class="card">
+            <div>
+                <button class="tag">
+                    Limited seats
+                </button>
+            </div>
+            <h3>SEO</h3>
+            <div class="card-svgs">
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 2.5H4.5C3.39543 2.5 2.5 3.39543 2.5 4.5V15.5C2.5 16.6046 3.39543 17.5 4.5 17.5H15.5C16.6046 17.5 17.5 16.6046 17.5 15.5V4.5C17.5 3.39543 16.6046 2.5 15.5 2.5Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M7.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                        <path d="M12.5 17.5V2.5" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round"></path>
+                    </svg>
+                    <div>2 Day</div>
+                </div>
+                <div class="svg-container">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.13446 12.5C5.1126 12.9526 4.45862 13.4842 4.23673 14.1164C4.16666 14.2888 4.16666 14.3822 4.16666 14.5618V17.1839C4.16666 17.8161 4.58708 18.3333 5.10092 18.3333H14.9107H14.8991C15.4129 18.3333 15.8333 17.8161 15.8333 17.1839V14.5618C15.8333 14.3894 15.8333 14.2026 15.7633 14.1164C15.5472 13.4914 14.8874 12.9454 13.8655 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M17.1667 1.66675H2.83334C1.72877 1.66675 0.833344 2.56218 0.833344 3.66675V16.3334C0.833344 17.438 1.72877 18.3334 2.83334 18.3334H17.1667C18.2712 18.3334 19.1667 17.438 19.1667 16.3334V3.66675C19.1667 2.56218 18.2712 1.66675 17.1667 1.66675Z" stroke="currentColor" stroke-width="1.25" stroke-miterlimit="10"></path>
+                        <path d="M9.99999 11.6667C8.16666 11.6667 6.66666 10.1994 6.66666 8.40588V7.42762C6.66666 5.63414 8.16666 4.16675 9.99999 4.16675C11.8333 4.16675 13.3333 5.63414 13.3333 7.42762V8.40588C13.3333 10.1994 11.8333 11.6667 9.99999 11.6667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <div>Live Included</div>
+                </div>
+            </div>
+            <h3 class="price">₹ 299</h3>
+            <a href="#" class="preview-dark-yellow">Preview 
+                <svg width="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform:translateY(3px);">
+                    <path d="M17 3V16.1578H13.3849V9.99409L6.36671 17L3 14.0002L10.3965 6.60882H3.33928V3L17 3Z" fill="currentColor"></path>
+                </svg>
+            </a>
+        </div>
+        
       </div>
     </div>
     <script src="./index.js"></script>
