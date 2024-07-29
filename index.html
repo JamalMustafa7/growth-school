@@ -9,6 +9,154 @@
       src="https://kit.fontawesome.com/937da32a17.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      @keyframes button-content-animation {
+        0% {
+          left: -10px;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+      @keyframes button-content-animation2 {
+        0% {
+          left: -40px;
+        }
+        100% {
+          left: calc(100% - 30px);
+        }
+      }
+      header {
+        padding:0 25px;
+        /* background-color: rgb(77, 36, 157); */
+        min-height: 40px;
+        position: relative;
+      }
+      .header-crux {
+        color: white;
+        font-size: 5rem;
+        font-weight: 400;
+        text-shadow: 3px 3px 2px rgba(22, 20, 20, 0.8);
+      }
+      .special-crux {
+        color: var(--green);
+      }
+      .header-para {
+        color: white;
+      }
+      .animation-button {
+        overflow: hidden;
+        padding: 30px 40px;
+        color: black;
+        background-color: var(--green);
+        box-shadow: 3px 3px 2px white;
+        border-radius: 10px;
+        border: none;
+        font-weight: 500;
+        position: relative;
+        cursor: pointer;
+      }
+      .animation-button::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 12px;
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 100%;
+        top: 0;
+        left: -10px;
+        transform: skew(-20deg);
+
+        animation: button-content-animation 1s linear infinite;
+      }
+      .animation-button::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 20px;
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 100%;
+        top: 0;
+        left: -10px;
+        transform: skew(-20deg);
+        animation-delay: 2s;
+
+        animation: button-content-animation2 1s linear infinite;
+      }
+      .crux-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 2rem;
+    }
+    @keyframes slide {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(100%);
+        }
+    }
+    @keyframes slide2 {
+        0%{
+            transform: translateX(-200%);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+    .slider{
+        display: flex;
+        overflow: hidden;
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+      .slider-1{
+        display: flex;
+        gap:1rem;
+        animation: slide 6s linear infinite;
+        
+      }
+      .slider-2{
+        display: flex;
+        gap:1rem;
+        animation: slide2 6s linear infinite;
+
+      }
+      .slider img{
+        width:250px;
+      }
+      @media screen and (min-width:1300px) {
+        .slider-1,.slider-2{
+            animation: none;
+        }
+        
+      }
+      .star{
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 20px;
+        }
+        .star img{
+        width:400px;
+      }
+
+
+
+
+
+
+
+
+      /* Learners */
+
+      
+    </style>
   </head>
 
   <body>
@@ -173,7 +321,61 @@
         </button>
       </div>
     </nav>
+    <header>
+      <div class="star">
+        <img src="./resources/grid.svg"/>
+      </div>
+      <div class="crux-container">
+        <h1 class="header-crux">
+          Become the top 1% in <span class="special-crux">Marketing</span>
+        </h1>
+        <p class="header-para">by learning from mentors in Marketing</p>
+        <button class="animation-button">
+          Explore Programs
+          <img src="./resources/forward-arrow.svg" alt="" />
+        </button>
+      </div>
+      <div class="slider">
+        <div class="slider-1">
+            <div>
+                <img src="./resources/deepan.webp">
+            </div>
+            <div>
+                <img src="./resources/adil.webp">
+            </div>
+            <div>
+                <img src="./resources/vaibnav.webp">
+            </div>
+            <div>
+                <img src="./resources/sudeep.webp">
+            </div>
+            <div>
+                <img src="./resources/raghuveer.webp">
+            </div>
+            </div>
+        <div class="slider-2">
+            <div>
+                <img src="./resources/deepan.webp">
+            </div>
+            <div>
+                <img src="./resources/adil.webp">
+            </div>
+            <div>
+                <img src="./resources/vaibnav.webp">
+            </div>
+            <div>
+                <img src="./resources/sudeep.webp">
+            </div>
+            <div>
+                <img src="./resources/raghuveer.webp">
+            </div>
+            </div>
+        </div>
+      </div>
+    </header>
+    <div class="learners">
 
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>
