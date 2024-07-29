@@ -10,152 +10,87 @@
       crossorigin="anonymous"
     ></script>
     <style>
-      @keyframes button-content-animation {
-        0% {
-          left: -10px;
-        }
-        100% {
-          left: 100%;
-        }
-      }
-      @keyframes button-content-animation2 {
-        0% {
-          left: -40px;
-        }
-        100% {
-          left: calc(100% - 30px);
-        }
-      }
-      header {
-        padding:0 25px;
-        /* background-color: rgb(77, 36, 157); */
-        min-height: 40px;
-        position: relative;
-      }
-      .header-crux {
-        color: white;
-        font-size: 5rem;
-        font-weight: 400;
-        text-shadow: 3px 3px 2px rgba(22, 20, 20, 0.8);
-      }
-      .special-crux {
-        color: var(--green);
-      }
-      .header-para {
-        color: white;
-      }
-      .animation-button {
-        overflow: hidden;
-        padding: 30px 40px;
-        color: black;
-        background-color: var(--green);
-        box-shadow: 3px 3px 2px white;
-        border-radius: 10px;
-        border: none;
-        font-weight: 500;
-        position: relative;
-        cursor: pointer;
-      }
-      .animation-button::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: 12px;
-        background-color: rgba(255, 255, 255, 0.3);
-        height: 100%;
-        top: 0;
-        left: -10px;
-        transform: skew(-20deg);
-
-        animation: button-content-animation 1s linear infinite;
-      }
-      .animation-button::after {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: 20px;
-        background-color: rgba(255, 255, 255, 0.3);
-        height: 100%;
-        top: 0;
-        left: -10px;
-        transform: skew(-20deg);
-        animation-delay: 2s;
-
-        animation: button-content-animation2 1s linear infinite;
-      }
-      .crux-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 2rem;
-    }
-    @keyframes slide {
-        0%{
-            transform: translateX(0);
-        }
-        100%{
-            transform: translateX(100%);
-        }
-    }
-    @keyframes slide2 {
-        0%{
-            transform: translateX(-200%);
-        }
-        100%{
-            transform: translateX(-100%);
-        }
-    }
-    .slider{
-        display: flex;
-        overflow: hidden;
-        max-width: 1300px;
-        margin: 0 auto;
-    }
-      .slider-1{
-        display: flex;
-        gap:1rem;
-        animation: slide 6s linear infinite;
-        
-      }
-      .slider-2{
-        display: flex;
-        gap:1rem;
-        animation: slide2 6s linear infinite;
-
-      }
-      .slider img{
-        width:250px;
-      }
-      @media screen and (min-width:1300px) {
-        .slider-1,.slider-2{
-            animation: none;
-        }
-        
-      }
-      .star{
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: 20px;
-        }
-        .star img{
-        width:400px;
-      }
-
-
-
-
-
-
-
-
       /* Learners */
 
-      
+      .learners{
+        background-color: white;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:2.5rem;
+        overflow: hidden;
+      }
+      .amount{
+        display: flex;
+        gap:2rem;
+        justify-content: center;
+      }
+      .amount,.learners > p{
+        padding: 0 1rem;
+        
+      }
+      .amount-instance{
+        border: 2px solid black;
+        border-radius: 16px;
+        padding: 2.5rem;
+        min-width: 220px;
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        gap:1.5rem;
+        align-items: center;
+      }
+      .amount-instance sub{
+        font-weight: 700;
+        display: inline-block;
+        font-size: 1.5rem;
+        transform: translateY(-10px);
+      }
+      .large-bold{
+        font-size: 3rem;
+        font-weight: 700;
+        color:rgb(51,51,51);
+      }
+      .amount-instance p{
+        font-size: 1.5rem;
+        font-weight: 400;
+        color:rgb(112,112,112);
+      }
+      .logo-slider{
+        margin-top: 2rem;
+        display: flex;
+        max-width:700px;
+        overflow: hidden;
+      }
+      .logo-slider img{
+        object-fit: contain;
+        width: 80px;
+        filter: invert(1);
+      }
+      .logo-slider-1,.logo-slider-2{
+        display: flex;
+        gap:2.5rem;
+        padding: 0 20px;
+        align-items: center;
+      }
+      .logo-slider-1{
+        animation: slide 5s linear infinite;
+        /* transform: translateX(-500px); */
+        
+      }
+      .logo-slider-2{
+        animation: slide2 5s linear infinite;
+
+      }
+      @media screen and (max-width:920px) {
+          
+        .amount{
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
+        }
+      }
     </style>
   </head>
 
@@ -323,8 +258,10 @@
     </nav>
     <header>
       <div class="star">
-        <img src="./resources/grid.svg"/>
+        <img src="./resources/star.svg"/>
       </div>
+      <div ><img src="./resources/grid.svg" class="grid grid1"></div>
+      <div ><img src="./resources/grid.svg" class="grid grid2"></div>
       <div class="crux-container">
         <h1 class="header-crux">
           Become the top 1% in <span class="special-crux">Marketing</span>
@@ -374,7 +311,82 @@
       </div>
     </header>
     <div class="learners">
-
+        <div class="amount">
+            <div class="amount-instance">
+                <div>
+                    <img src="./resources/amount-persons.png" style="width:110px;"/>
+                </div>
+                <div class="large-bold">
+                    <span>300k<sub>+</sub></span>
+                </div>
+                <p>Total Learners</p>
+            </div>
+            <div class="amount-instance">
+                <div>
+                    <img src="./resources/amount-stars.png" style="width: 130px;"/>
+                </div>
+                <div class="large-bold">
+                    <span>4.2<sub>/5</sub></span>
+                </div>
+                <p style="text-transform: uppercase;">csat</p>
+            </div>
+        </div>
+        <p style="max-width: 500px;text-align:center; line-height:1.5; color:rgb(75,75,75);font-size:20px">Learners who took Marketing programs in GrowthSchool work at some of the top companies.</p>
+        <div class="logo-slider">
+            <div class="logo-slider-1">
+                <div>
+                    <img src="./resources/company logos/expedia.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/hotstar.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/licious.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/oglivy.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/wallmart.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/google.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/amazon.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/oyo.svg" alt="" />
+                </div>
+            </div>
+            <div class="logo-slider-2">
+                <div>
+                    <img src="./resources/company logos/expedia.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/hotstar.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/licious.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/oglivy.svg" alt="">
+                </div>
+                <div>
+                    <img src="./resources/company logos/wallmart.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/google.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/amazon.svg" alt="" />
+                </div>
+                <div>
+                    <img src="./resources/company logos/oyo.svg" alt="" />
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
     <script src="./index.js"></script>
   </body>
