@@ -5,12 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learning Marketing with Our Company</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./resources/logo.svg" type="image/x-icon">
     <script
       src="https://kit.fontawesome.com/937da32a17.js"
       crossorigin="anonymous"
     ></script>
     <style>
-      
+        /* Footer */
+        .reviews{
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(390px,1fr));
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgb(53,57,69);
+        gap:1rem;
+
+        max-width:1200px;
+        margin:0 auto;
+        }
+      .review{
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        gap:20px;
+        background-color: rgb(28,33,49);
+        border-radius: 15px;
+        flex-grow: 1;
+        width:100;
+        max-width: 800px;
+        margin-bottom: 20px;
+      }
+      .company-name,footer a{
+        color:rgb(178,189,194);
+        font-weight: 600;
+        font-size: 20px;
+      }
+      footer a{
+        font-size: 16px;
+        transition: 0.3s;
+      }
+      footer a:hover{
+        color:white;
+      }
+      footer li{
+        line-height: 2.5;
+      }
+      .rating,.heading,.footer-para-heading{
+        color:white;
+        font-weight: 700;
+        font-size: 24px;
+      }
+      .description{
+        height:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .footer-animation-button{
+        transition: all 0.4s;
+      }
+      .footer-animation-button:hover{
+        box-shadow: none;
+      }
+      .left{
+        line-height: 1.4;
+        color:rgb(129,132,141);
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+        max-width: 900px;
+      }
+      .copyright{
+        font-size: 14px;
+        color:rgb(255,255,255,0.5);
+        padding-left:10px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .mail-input{
+        padding: 1rem;
+        border-radius: 12px;
+        outline: none;
+        border: none;
+        box-shadow:2px 2px 1px rgba(12, 12, 12, 0.625),3px 3px 1px white;
+      }
+      .footer-links{
+        margin: 3rem auto;
+        display:flex;
+        width:100%;
+        max-width:1200px;
+        padding-bottom: 4rem;
+        border-bottom: 1px solid rgb(53,57,69);
+
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:3rem;
+      }
+      footer .links{
+        display: grid;
+        gap:2rem;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        flex-grow: 1;
+        justify-content: center;
+      }
+     .footer-input-container{
+        display: flex;
+        gap:1rem;
+        width:100%;
+        flex-wrap: wrap;
+     }
+     .footer-input-container input{
+        flex-grow: 1;
+     }
+     .social-media{
+        display: flex;
+        align-items: center;
+        gap:12px;
+     }
+     .social-media svg{
+        transition: 0.3s;
+        cursor: pointer;
+     }
+     .social-media svg:hover{
+        filter: invert(0.2);
+     }
+     @media screen and (min-width:1100px) {
+        .left {
+            max-width: 400px;
+        }
+        
+     }
+    
+      @media screen and (max-width:1100px)
+      {
+        .links{
+            width:100%;
+        }
+        .reviews{
+            flex-direction: column;
+        }
+        .footer-links{
+            align-items: center;
+            flex-direction: column;
+        }
+      }
     </style>
   </head>
 
@@ -187,10 +326,14 @@
           Become the top 1% in <span class="special-crux">Marketing</span>
         </h1>
         <p class="header-para">by learning from mentors in Marketing</p>
+
+
         <button class="animation-button">
           Explore Programs
           <img src="./resources/forward-arrow.svg" alt="" />
         </button>
+
+
       </div>
       <div class="slider">
         <div class="slider-1">
@@ -562,6 +705,125 @@
             </button>
         </a>
       </div>
+    <footer style="background-color:rgb(3,9,29);color:white;padding:4rem 1rem">
+            <div class="reviews">
+                <div class="review">
+                    <svg width="60px" viewBox="0 0 255 252" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M216.818 214.202H179.232V155.921C179.232 142.023 178.981 124.132 159.683 124.132C140.107 124.132 137.112 139.274 137.112 154.909V214.198H99.5253V94.3475H135.608V110.726H136.113C139.724 104.613 144.942 99.584 151.212 96.1747C157.481 92.7655 164.567 91.1037 171.714 91.3664C209.81 91.3664 216.833 116.177 216.833 148.454L216.818 214.202ZM57.1158 77.9648C52.8018 77.9655 48.5844 76.6997 44.9971 74.3272C41.4097 71.9548 38.6137 68.5823 36.9621 64.6362C35.3105 60.6902 34.8776 56.3479 35.7185 52.1584C36.5593 47.9688 38.6361 44.1203 41.686 41.0994C44.7358 38.0784 48.6219 36.0208 52.8528 35.1868C57.0837 34.3527 61.4693 34.7796 65.4552 36.4135C69.4411 38.0474 72.8481 40.8149 75.2454 44.3661C77.6428 47.9172 78.9228 52.0926 78.9236 56.364C78.9241 59.2002 78.3603 62.0086 77.2647 64.6291C76.169 67.2495 74.563 69.6306 72.5379 71.6365C70.5129 73.6423 68.1085 75.2335 65.4624 76.3193C62.8163 77.4051 59.9801 77.9643 57.1158 77.9648ZM75.9088 214.202H38.2836V94.3475H75.9088V214.202ZM235.556 0.210594H19.3966C14.4904 0.155772 9.7627 2.03183 6.25276 5.42651C2.74282 8.82119 0.737795 13.4568 0.677917 18.3146V233.233C0.735746 238.093 2.7396 242.732 6.24941 246.13C9.75923 249.528 14.488 251.408 19.3966 251.356H235.556C240.474 251.417 245.216 249.543 248.74 246.145C252.264 242.747 254.281 238.103 254.349 233.233V18.2991C254.279 13.4316 252.26 8.79078 248.736 5.39618C245.213 2.00158 240.472 0.130885 235.556 0.195081" fill="white"></path>
+                    </svg>
+                    <div class="description">
+                        <div class="company-name">LinkedIn</div>
+                        <div class="rating">Top Startup 2023</div>
+                    </div>
+                </div>
+                <div class="review">
+                    <svg width="60px" height="46" viewBox="0 0 48 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.0005 17.6214H29.6708L24.0091 0.17627L18.3297 17.6214L0 17.6037L14.8443 28.3963L9.16487 45.8237L24.0091 35.0488L38.8357 45.8237L33.174 28.3963L48.0005 17.6214Z" fill="white"></path>
+                    </svg>
+                    <div class="description">
+                        <div class="company-name">Trustpilot</div>
+                        <div class="rating">Rated 4.7/5 (4192)</div>
+                    </div>
+                </div>
+                <div class="review">
+                    <svg width="60px" viewBox="0 0 301 301" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M282.41 153.5C282.41 143.75 281.535 134.375 279.91 125.375H150.41V178.562H224.41C221.222 195.75 211.535 210.312 196.972 220.062V254.562H241.41C267.41 230.625 282.41 195.375 282.41 153.5Z" fill="white"></path>
+                        <path d="M150.41 287.875C187.535 287.875 218.66 275.562 241.41 254.562L196.972 220.062C184.66 228.312 168.91 233.187 150.41 233.187C114.597 233.187 84.2848 209 73.4723 176.5H27.5348V212.125C50.1598 257.062 96.6598 287.875 150.41 287.875Z" fill="white"></path>
+                        <path d="M73.4723 176.5C70.7223 168.25 69.1598 159.437 69.1598 150.375C69.1598 141.312 70.7223 132.5 73.4723 124.25V88.6249H27.5348C17.9098 107.786 12.9013 128.933 12.9098 150.375C12.9098 172.562 18.2223 193.562 27.5348 212.125L73.4723 176.5Z" fill="white"></path>
+                        <path d="M150.41 67.5624C170.597 67.5624 188.722 74.4999 202.972 88.1249L242.41 48.6874C218.597 26.4999 187.472 12.8749 150.41 12.8749C96.6598 12.8749 50.1598 43.6874 27.5348 88.6249L73.4723 124.25C84.2848 91.7499 114.597 67.5624 150.41 67.5624Z" fill="white"></path>
+                    </svg>
+                    <div class="description">
+                        <div class="company-name">Trustpilot</div>
+                        <div class="rating">Rated 4.7/5 (4192)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="left">
+                    <div>
+                        <div class="footer-para-heading" style="margin-bottom: 8px;">
+                            Best kept secrets ✨
+                        </div>
+                        <p>
+                            Be the first to find out about the newest programs, workshops, and community activities - plus industry news, articles, and special reports. All delivered to your inbox!
+                        </p>
+                    </div>
+                    <div class="footer-input-container">
+                        <input type="text" placeholder="Enter your email" class="mail-input">
+                        <button class="animation-button footer-animation-button" style="padding:0.8rem;">Subsribe
+                            <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.9915 8.49928L7.36188 16.1289L5.32654 14.0935L8.90059 10.5195L0.886943 10.6306L0.730906 6.99566L9.18105 6.87403L5.20781 2.90078L7.30039 0.808204L14.9915 8.49928Z" fill="currentColor"></path>
+                            </svg>
+                                
+                        </button>
+                    </div>
+                    <div class="social-media">
+                        <svg width="40px" viewBox="0 0 32 33"  xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0016 25.9066H13.2854V17.1436H11.4285V14.1242H13.2854V12.3114C13.2854 9.84829 14.3334 8.38281 17.3127 8.38281H19.7924V11.4034H18.2426C17.0828 11.4034 17.0061 11.8253 17.0061 12.6128L17.001 14.1242H19.8094L19.4807 17.1436H17.001L17.0016 25.9066Z" fill="white"></path>
+                        </svg>
+                        <svg width="40px" height="33" viewBox="0 0 32 33"  xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.496 13.0744C23.1741 12.6465 23.6944 11.9681 23.9385 11.1598C23.3037 11.557 22.6021 11.8442 21.8537 11.9997C21.2564 11.3262 20.4027 10.9062 19.4579 10.9062C17.6454 10.9062 16.1766 12.4564 16.1766 14.368C16.1766 14.6394 16.2038 14.9039 16.2602 15.1564C13.5329 15.0118 11.1147 13.635 9.49467 11.5392C9.21199 12.0522 9.05046 12.6465 9.05046 13.2804C9.05046 14.4809 9.62991 15.5407 10.5108 16.1628C9.97269 16.1449 9.4665 15.9874 9.02323 15.7299V15.7725C9.02323 17.4504 10.1539 18.85 11.6575 19.1669C11.3814 19.2481 11.0921 19.2887 10.7916 19.2887C10.5803 19.2887 10.3737 19.2679 10.1746 19.2273C10.5916 20.6021 11.804 21.6045 13.2409 21.6312C12.1167 22.5603 10.7015 23.113 9.1641 23.113C8.89926 23.113 8.63724 23.0982 8.38086 23.0655C9.8337 24.047 11.5589 24.6205 13.4127 24.6205C19.4514 24.6205 22.7515 19.3452 22.7515 14.7701C22.7515 14.6196 22.7496 14.47 22.743 14.3224C23.3844 13.8341 23.9423 13.224 24.3809 12.5297C23.792 12.805 23.159 12.9912 22.496 13.0744Z" fill="white"></path>
+                        </svg>
+                        <svg width="40px" height="33" viewBox="0 0 32 33"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24.9455 20.7123C24.902 21.6704 24.7496 22.3245 24.5272 22.897C24.0597 24.1059 23.104 25.0616 21.8951 25.5292C21.3228 25.7516 20.6684 25.9037 19.7106 25.9474C18.7509 25.9912 18.4443 26.0017 16.0001 26.0017C13.5557 26.0017 13.2494 25.9912 12.2894 25.9474C11.3316 25.9037 10.6773 25.7516 10.105 25.5292C9.50419 25.3032 8.96036 24.949 8.51074 24.491C8.053 24.0416 7.69881 23.4975 7.47281 22.897C7.2504 22.3247 7.09805 21.6704 7.05453 20.7126C7.01028 19.7526 7 19.446 7 17.0018C7 14.5577 7.01028 14.2511 7.05429 13.2913C7.09781 12.3333 7.24992 11.6792 7.47233 11.1067C7.69833 10.5061 8.05276 9.96207 8.51074 9.5127C8.96012 9.05471 9.50419 8.70053 10.1047 8.47452C10.6773 8.25211 11.3313 8.10001 12.2894 8.05624C13.2491 8.01248 13.5557 8.00195 15.9999 8.00195C18.4441 8.00195 18.7507 8.01248 19.7104 8.05648C20.6684 8.10001 21.3225 8.25211 21.8951 8.47428C22.4956 8.70029 23.0397 9.05471 23.4893 9.5127C23.947 9.96231 24.3014 10.5061 24.5272 11.1067C24.7499 11.6792 24.902 12.3333 24.9457 13.2913C24.9895 14.2511 24.9998 14.5577 24.9998 17.0018C24.9998 19.446 24.9895 19.7526 24.9455 20.7123ZM23.0157 11.694C22.8715 11.3033 22.6415 10.9495 22.3425 10.6592C22.0522 10.3603 21.6987 10.1302 21.3077 9.98599C20.9906 9.86282 20.5142 9.71622 19.6367 9.67628C18.6875 9.63299 18.4029 9.62366 15.9999 9.62366C13.5966 9.62366 13.312 9.63275 12.3631 9.67604C11.4856 9.71622 11.009 9.86282 10.6921 9.98599C10.3011 10.1302 9.94735 10.3603 9.65725 10.6592C9.35831 10.9495 9.12824 11.303 8.98379 11.694C8.86063 12.0112 8.71403 12.4878 8.67409 13.3652C8.6308 14.3142 8.62147 14.5988 8.62147 17.0021C8.62147 19.4051 8.6308 19.6897 8.67409 20.6389C8.71403 21.5164 8.86063 21.9928 8.98379 22.3099C9.12824 22.7009 9.35807 23.0544 9.65701 23.3447C9.94735 23.6437 10.3008 23.8737 10.6918 24.0179C11.009 24.1413 11.4856 24.2879 12.3631 24.3279C13.312 24.3712 13.5964 24.3803 15.9997 24.3803C18.4032 24.3803 18.6878 24.3712 19.6365 24.3279C20.5139 24.2879 20.9906 24.1413 21.3077 24.0179C22.0926 23.7152 22.713 23.0948 23.0157 22.3099C23.1389 21.9928 23.2855 21.5164 23.3257 20.6389C23.369 19.6897 23.3781 19.4051 23.3781 17.0021C23.3781 14.5988 23.369 14.3142 23.3257 13.3652C23.2858 12.4878 23.1392 12.0112 23.0157 11.694ZM15.9999 12.3804C18.5522 12.3804 20.6213 14.4493 20.6213 17.0018C20.6213 19.5543 18.5522 21.6233 15.9999 21.6233C13.4474 21.6233 11.3782 19.5543 11.3782 17.0018C11.3782 14.4493 13.4474 12.3804 15.9999 12.3804ZM15.9999 14.0019C14.343 14.0019 12.9999 15.345 12.9999 17.0018C12.9999 18.6587 14.343 20.0018 15.9999 20.0018C17.6568 20.0018 18.9999 18.6587 18.9999 17.0018C18.9999 15.345 17.6568 14.0019 15.9999 14.0019ZM20.804 13.2777C20.2076 13.2777 19.724 12.7941 19.724 12.1977C19.724 11.6012 20.2076 11.1177 20.804 11.1177C21.4005 11.1177 21.8841 11.6012 21.8841 12.1977C21.8838 12.7941 21.4005 13.2777 20.804 13.2777Z" fill="white"></path>
+                        </svg>
+                        <svg width="40px" height="33" viewBox="0 0 32 33"  xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.76522 13.269H11.7352V23.6199H8.76522V13.269ZM10.1745 11.9743H10.153C9.0779 11.9743 8.38086 11.183 8.38086 10.181C8.38086 9.15847 9.0985 8.38281 10.1951 8.38281C11.2909 8.38281 11.9646 9.15652 11.9861 10.1781C11.9861 11.1801 11.2909 11.9743 10.1745 11.9743ZM23.619 23.6209H20.2511V18.2635C20.2511 16.8614 19.7243 15.9053 18.5659 15.9053C17.6798 15.9053 17.187 16.5502 16.9577 17.1736C16.8717 17.3961 16.8851 17.7073 16.8851 18.0196V23.6209H13.5486C13.5486 23.6209 13.5916 14.1315 13.5486 13.269H16.8851V14.8935C17.0822 14.1832 18.1484 13.1695 19.8497 13.1695C21.9606 13.1695 23.619 14.6593 23.619 17.8644V23.6209Z" fill="white"></path>
+                        </svg>
+                    </div>
+                    <div >
+                        <img src="./resources/footer-logo.svg" style="width: 130px;">
+                    </div>
+                </div>
+                <div class="links">
+                    <div>
+                        <div class="heading">Industries</div>
+                        <ul class="list">
+                            <li><a href="#">Marketing</a></li>
+                            <li><a href="#">Generative AI</a></li>
+                            <li><a href="#">Product</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Tech & Data</a></li>
+                          </ul>
+                    </div>
+                    <div>
+                        <div class="heading">Roles</div>
+                        <ul>
+                            <li><a href="#">Personal Growth</a></li>
+                            <li><a href="#">Founders</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="heading">Engage</div>
+                        <ul>
+                            <ul class="list">
+                                <li><a href="#">Upskill your Team</a></li>
+                                <li><a href="#">Learner's Center</a></li>
+                                <li><a href="#">Newsletter Vault</a></li>
+                                <li><a href="#">Apply as Mentor</a></li>
+                                <li><a href="#">Topics</a></li>
+                                <li><a href="#">Free Courses</a></li>
+                              </ul>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="heading">Company</div>
+                        <ul class="list">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+        <div class="copyright">
+            &copy; Muhammad Jamal Mustafa 2024 All rights reserved
+        </div>
+    </footer>
     <script src="./index.js"></script>
   </body>
 </html>
