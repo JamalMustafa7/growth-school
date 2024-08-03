@@ -21,6 +21,7 @@
     display: flex;
     align-items: center;
     padding: 0 40px;
+    transition: 1s;
   }
   .logo img {
     width: 115px;
@@ -126,6 +127,9 @@
   }
   .hide {
     display: none;
+  }
+  .reduce-height{
+    height:0;
   }
   @media screen and (max-width: 850px)  {
     .dropdown {
@@ -511,6 +515,9 @@
   .preview-dark-yellow{
     color:#957c17;
   }
+  .preview-blue{
+    color: #056a67;
+  }
   .card h3{
     font-size: 2rem;
     font-weight: 600;
@@ -524,6 +531,11 @@
    .card .special-tag{
     background-color:rgb(219,212,229);
     border:1px solid rgba(150, 98, 255, .3);
+  }
+  .card .best-seller{
+    color: #766213;
+    background-color: rgba(203, 177, 73, .2);
+    border-color: rgba(121, 104, 34, .3);
   }
   .card-svgs{
     display: flex;
@@ -579,8 +591,74 @@
     box-shadow:2px 2px #fff, 3px 3px #030a21;
     background: linear-gradient(90deg, rgba(4,21,20,1) 0%, rgba(31,47,126,1) 42%, rgba(39,54,156,1) 74%, rgba(8,24,34,1) 100%);
   }
+  /* 
+  Self Paced Programs
+  */
 
+  .self-paced-card{
+    background: linear-gradient(270deg, rgba(55, 237, 129, .2), rgba(255, 255, 255, .2));
+  }
+  .teacher-info{
+    display: flex;
+    gap:10px;
+    align-items: center;
+  }
+
+
+
+  /* Above Footer */
+.practitioner
+{
+  position: relative;
+  width:250px;
+  border:1px solid white;
+  box-sizing: content-box;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.overlay{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(3,9,29,0.7));
+}
+.practitioner-info{
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:45px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align: center;
+}
+.partitioner-logo{
+  margin: 0 auto;
+  /* background-color: white; */
+  position: absolute;
+  bottom:-30px;
+  transform: translateX(-50%);
+  left:50%;
+
+  /* height: 20px; */
+  background-color: white;
+  z-index: 10;
+}
+.partitioner-logo img{
+  margin:0 20px;
+  height:60px;
+  max-width: 180px;
+  object-fit: cover;
+  color: white;
+}
   /* Footer */
+  footer,.above-footer{
+    background-color:rgb(3,9,29);
+    color:white;
+    padding:4rem 1rem
+  }
   .reviews{
     align-items: center;
     display: grid;

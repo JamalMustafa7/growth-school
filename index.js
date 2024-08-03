@@ -2,7 +2,7 @@ const dropdownButton=document.querySelector(".dropdown-button");
 const dropdown=document.querySelector(".dropdown");
 const hamburger=document.querySelector(".hamburger");
 const innerLink=document.querySelector(".nav-inner-links");
-
+const navbar=document.querySelector(".navbar");
 let dropdown_open=false;
 let hamburger_open=false;
 document.addEventListener('DOMContentLoaded',function()
