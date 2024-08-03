@@ -205,6 +205,7 @@
 
   /* Header */
 
+  
   @keyframes button-content-animation {
     0% {
       left: -10px;
@@ -324,9 +325,9 @@
     animation: slide2 6s linear infinite;
 
   }
-  .slider img{
+  header .slider img{
     width:250px;
-    filter:grayscale(10)
+    filter:grayscale(10);
   }
   .grid{
     position: absolute;
@@ -339,7 +340,7 @@
     right:0;
   }
   @media screen and (min-width:1300px) {
-    .slider-1,.slider-2{
+    .header .slider-1,.header .slider-2{
         animation: none;
     }
 }
@@ -366,7 +367,7 @@
 
   /* Learners */
 
-  .learners{
+   .learners{
     background-color: white;
     padding-top: 2rem;
     display: flex;
@@ -471,16 +472,45 @@
     text-shadow: 1px 1px 1px rgb(143, 142, 142);
   }
 
+  /* Custom Cards */
 
+  .custom-cards .tutor-name{
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    color:white;
+    bottom:12px;
+    left:50%;
+    transform:translateX(-50%)
+  }
+  .custom-cards .images-container{
+    background-color:rgb(60,67,50);
+    border-radius:50%;
+    width: 160px;
+    height:160px;
+    display:flex;
+    justify-content: center;
+    align-items:flex-start;
+    position:absolute;
+    bottom:-100px;
+    right:20px;
+  }
+  .custom-cards .card{
+    overflow: hidden;
+  }
+  .images-container img{
+    max-height: 110px;
+    object-fit: cover;
+  }
   /* Crash Courses */
   .crash-courses{
     margin-top:5rem;
   }
   .cards{
     margin: 4rem auto 4rem auto;
-    padding: 0 30px;
+    padding: 0 20px;
     display: grid;
-    grid-template-columns:repeat(auto-fill,minmax(350px,1fr));
+    grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
     max-width: calc(4 * 350px + 60px + 4 * 16px );
     gap:1.5rem;
 }
@@ -536,6 +566,9 @@
     color: #766213;
     background-color: rgba(203, 177, 73, .2);
     border-color: rgba(121, 104, 34, .3);
+  }
+  .green-tag{
+    background-color: (39,46,60);
   }
   .card-svgs{
     display: flex;
@@ -607,14 +640,27 @@
 
 
   /* Above Footer */
+
+.practitioners{
+  display: flex;
+  gap:1rem;
+  padding: 0 0.5rem;
+}
 .practitioner
 {
   position: relative;
   width:250px;
   border:1px solid white;
   box-sizing: content-box;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 15px;
+}
+.practitioner .description{
+  color:rgba(224, 214, 214, 0.845)
+}
+.practitioner > img{
+  border-radius: 15px;
+
 }
 .overlay{
   position: absolute;
@@ -623,6 +669,11 @@
   left:0;
   right:0;
   background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(3,9,29,0.7));
+
+}
+.practitioner .overlay{
+  border-radius: 15px;
+
 }
 .practitioner-info{
   position: absolute;
@@ -633,25 +684,74 @@
   flex-direction:column;
   align-items:center;
   text-align: center;
+  /* z-index: 99; */
 }
 .partitioner-logo{
   margin: 0 auto;
-  /* background-color: white; */
   position: absolute;
-  bottom:-30px;
-  transform: translateX(-50%);
+  bottom:0;
+  transform: translate(-50%,30%);
   left:50%;
-
-  /* height: 20px; */
+  border-radius: 10px;
   background-color: white;
   z-index: 10;
 }
 .partitioner-logo img{
   margin:0 20px;
-  height:60px;
+  height:28px;
   max-width: 180px;
   object-fit: cover;
   color: white;
+}
+.above-footer h2{
+  font-size: 3rem;
+  text-align:center
+}
+
+/* Learner */
+
+.above-footer .learners{
+  display: grid;
+  padding: 10px;
+  width:max-content;
+  margin:1rem auto;
+  grid-template-columns: repeat(2,400px);
+  background-color: inherit;
+  align-content: center;
+  gap:1rem;
+  
+}
+.above-footer .learners .card{
+  background: white;
+}
+.above-footer .learners .card:nth-child()
+{
+  height: max(20rem,max-content);
+}
+@media screen and (max-width:840px) {
+  .above-footer .learners{
+    margin:1rem;
+    width:auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Featured */
+
+.featured{
+  padding: 3rem 0;
+}
+.feature{
+  width:250px;
+  height:250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.feature img{
+  max-width: 120px;
 }
   /* Footer */
   footer,.above-footer{
@@ -662,7 +762,7 @@
   .reviews{
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(390px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
     padding-bottom: 2rem;
     border-bottom: 1px solid rgb(53,57,69);
     gap:1rem;
